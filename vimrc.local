@@ -1,0 +1,48 @@
+set mouse=a
+set background=dark
+colorscheme distinguished
+" Autoindent with two spaces, always expand tabs
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set softtabstop=2
+set nospell
+set wrap
+set colorcolumn=80
+
+" specifically for java 4 tab spaces (for Grisha)
+" filetype on
+
+" autocmd BufNewFile,BufRead *.java set filetype=java
+" autocmd FileType java setlocal shiftwidth=4 tabstop=4 softtabstop=4
+
+let g:neocomplcache_disable_auto_complete = 1
+
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<TAB>" : "\<C-x>\<C-u>"
+function! s:check_back_space()"{{{
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1] =~ '\s'
+endfunction"}}}"
+
+" don't display indent guides on startup ( enable with ,ig )
+let g:indent_guides_enable_on_vim_startup = 0"
+
+" Ignore case in searches
+set ignorecase
+
+" Remove trailing spaces
+" function TrimWhiteSpace()
+"   %s/\*$//
+"   ''
+" :endfunction
+
+" set list listchars=tab:Â»Â·,trail:Â·
+
+" map <leader>= :call TrimWhiteSpace()<CR>
+" map! <leader>= :call TrimWhiteSpace()<CR>
+
+" autocmd BufWritePre * :%s/\s\+$//e
+
+let g:spf13_keep_trailing_whitespace=1
+
+let g:tmux_navigator_save_on_switch = 1

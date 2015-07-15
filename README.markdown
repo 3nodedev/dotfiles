@@ -1,7 +1,20 @@
 Dotfiles
 ========
-This repository includes all of my custom dotfiles.  They should be cloned to
-your home directory so that the path is `~/dotfiles/`.  The included setup
+This repository is a fork of https://github.com/michaeljsmalley/dotfiles.
+I've made several modifcations to the original as I liked the script he used in
+order to replicate his dotfiles. I do not use oh-my-zsh but prezto and use the
+very opinionated spf13-vim dotrepo for vim as it is much easier for me to remove
+those addons that I don't use than add all the work that Steve Francia has done
+on spf13. I include all the dotlocal files that have my customizations in them.
+
+TODO update the laptop files (thoughbot for OSX) and add things like brew for mac
+and add checks for vim versions as spf13 needs an updated vim on OSX. I also need
+to check for tmux installations.
+
+Michael's original Instructions below
+------------
+
+They should be cloned to your home directory so that the path is `~/dotfiles/`.  The included setup
 script creates symlinks from your home directory to the files which are located
 in `~/dotfiles/`.
 
