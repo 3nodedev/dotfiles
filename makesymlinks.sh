@@ -37,6 +37,8 @@ install_spf13 () {
     cd ~
     curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
     cd $dir
+  else
+    echo "Done installations"
   fi
 }
 
@@ -46,6 +48,10 @@ if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
   # Clone prezto repository from GitHub only if it isn't already present
   if [[ ! -d ~/.zprezto/ ]]; then
     git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+    setopt EXTENDED_GLOB
+    for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+      ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+    done
   fi
   # Set the default shell to zsh if it isn't currently set to zsh
   if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
@@ -61,7 +67,7 @@ else
       install_zsh
     fi
     if [[ -f /etc/debian_version ]]; then
-      sudo apt-get install zsh
+      sudo apt-get install zsh -y
       install_zsh
     fi
   # If the platform is OS X, tell the user to install zsh :)
@@ -73,3 +79,4 @@ fi
 }
 
 install_zsh
+install_spf13
