@@ -9,7 +9,7 @@
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 files="laptop.local vimrc.before.local vimrc.bundles.local vimrc.local tmux.conf"    # list of files/folders to symlink in homedir
-zfiles="zlogin zlogout zpreztorc zprofile zshenv zshrc" # list of files for zprezto
+zfiles=(zlogin zlogout zpreztorc zprofile zshenv zshrc) # list of files for zprezto
 
 ##########
 
@@ -49,9 +49,8 @@ if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
   # Clone prezto repository from GitHub only if it isn't already present
   if [[ ! -d ~/.zprezto/ ]]; then
     git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-    setopt EXTENDED_GLOB
-    for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/$zfiles; do
-      ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+    for file in $zfiles; do
+      ln -s ~/.zprezto/runcoms/$file ~/.$file
     done
   fi
   # Set the default shell to zsh if it isn't currently set to zsh
