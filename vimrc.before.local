@@ -1,2 +1,5 @@
 " Enable powerline symbols
 let g:airline_powerline_fonts=1
+
+" Bundle Groups
+let g:spf13_bundle_groups=['general', 'programming', 'writing', 'php', 'javascript', 'html', 'ruby', 'misc', 'python' ]

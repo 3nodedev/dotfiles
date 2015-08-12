@@ -16,7 +16,7 @@ set colorcolumn=80
 " autocmd BufNewFile,BufRead *.java set filetype=java
 " autocmd FileType java setlocal shiftwidth=4 tabstop=4 softtabstop=4
 
-let g:neocomplcache_disable_auto_complete = 1
+let g:neocomplcache_disable_auto_complete=1
 
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<TAB>" : "\<C-x>\<C-u>"
 function! s:check_back_space()"{{{
