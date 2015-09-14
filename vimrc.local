@@ -1,6 +1,10 @@
+" no backups "
+set nobackup
+set nowritebackup
+
 set mouse=a
 set background=dark
-colorscheme distinguished
+colorscheme osx_like
 " Autoindent with two spaces, always expand tabs
 set tabstop=2
 set shiftwidth=2
@@ -11,10 +15,12 @@ set wrap
 set colorcolumn=80
 
 " specifically for java 4 tab spaces (for Grisha)
-" filetype on
+filetype on
 
-" autocmd BufNewFile,BufRead *.java set filetype=java
-" autocmd FileType java setlocal shiftwidth=4 tabstop=4 softtabstop=4
+autocmd BufNewFile,BufRead *.java set filetype=java
+autocmd BufNewFile,BufRead *.php set filetype=php
+autocmd FileType java setlocal shiftwidth=4 tabstop=4 softtabstop=4
+autocmd FileType php setlocal shiftwidth=4 tabstop=4 softtabstop=4
 
 let g:neocomplcache_disable_auto_complete=1
 
@@ -46,3 +52,5 @@ set ignorecase
 let g:spf13_keep_trailing_whitespace=1
 
 let g:tmux_navigator_save_on_switch = 1
+
+set guifont=Inconsolata\ for\ Powerline\ Medium\ 16
