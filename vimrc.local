@@ -18,9 +18,9 @@ set colorcolumn=80
 filetype on
 
 autocmd BufNewFile,BufRead *.java set filetype=java
-autocmd BufNewFile,BufRead *.php set filetype=php
+" autocmd BufNewFile,BufRead *.php set filetype=php
 autocmd FileType java setlocal shiftwidth=4 tabstop=4 softtabstop=4
-autocmd FileType php setlocal shiftwidth=4 tabstop=4 softtabstop=4
+" autocmd FileType php setlocal shiftwidth=4 tabstop=4 softtabstop=4
 
 let g:neocomplcache_disable_auto_complete=1
 
@@ -48,6 +48,10 @@ set ignorecase
 " map! <leader>= :call TrimWhiteSpace()<CR>
 
 " autocmd BufWritePre * :%s/\s\+$//e
+
+" turn off folding
+set nofoldenable
+let g:DisableAutoPHPFolding=1
 
 let g:spf13_keep_trailing_whitespace=1
 
