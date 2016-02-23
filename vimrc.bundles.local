@@ -8,7 +8,7 @@ Bundle 'matze/vim-move'
 Bundle 'vim-scripts/xoria256.vim'
 Bundle 'chase/vim-ansible-yaml'
 Bundle 'christoomey/vim-tmux-navigator'
-
+Bundle 'rking/ag.vim'
 
 UnBundle 'bling/vim-bufferline'
 UnBundle 'Shougo/neocomplete.vim.git'
