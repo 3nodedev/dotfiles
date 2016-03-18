@@ -45,3 +45,11 @@ git clone https://github.com/3nodedev/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ./makesymlinks.sh
 ```
+
+Added to .zshrc
+---------------
+
+```
+ alias ll='ls -all'
+ alias ugh='rm -rf node_modules/ bower_components/ && npm cache clean && bower cache clean && npm i && bower i'
+```
