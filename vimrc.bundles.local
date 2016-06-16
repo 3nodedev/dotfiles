@@ -9,6 +9,7 @@ Bundle 'vim-scripts/xoria256.vim'
 Bundle 'chase/vim-ansible-yaml'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'rking/ag.vim'
+Bundle 'airblade/vim-gitgutter'
 
 UnBundle 'bling/vim-bufferline'
 UnBundle 'honza/vim-snippets'
