@@ -5,7 +5,8 @@ set nowritebackup
 
 set mouse=a
 set background=dark
-colorscheme osx_like
+" colorscheme osx_like
+colorscheme Tomorrow-Night-Bright
 " Autoindent with two spaces, always expand tabs
 set tabstop=2
 set shiftwidth=2
