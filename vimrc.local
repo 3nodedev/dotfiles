@@ -3,7 +3,7 @@ set wrap
 set nobackup
 set nowritebackup
 
-set mouse=a
+" set mouse=a
 set background=dark
 " colorscheme osx_like
 colorscheme Tomorrow-Night-Bright
