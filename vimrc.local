@@ -5,6 +5,7 @@ set nowritebackup
 
 " set mouse=a
 set background=dark
+set t_Co=256
 " colorscheme osx_like
 colorscheme Tomorrow-Night-Bright
 " Autoindent with two spaces, always expand tabs
@@ -64,3 +65,19 @@ set guifont=Inconsolata\ for\ Powerline\ Medium\ 16
 
 " autocmd BufWritePost * execute "!/Users/bs/Documents/Telus/tc-in-box/data/source/uss-local-environment/plugins/vim-plugin/uss-sync.py %:p /Users/bs/Documents/Telus/tc-in-box/data/source/uss-local-environment/ > /dev/null 2>&1"
 
+inoremap <Esc>Oq 1
+inoremap <Esc>Or 2
+inoremap <Esc>Os 3
+inoremap <Esc>Ot 4
+inoremap <Esc>Ou 5
+inoremap <Esc>Ov 6
+inoremap <Esc>Ow 7
+inoremap <Esc>Ox 8
+inoremap <Esc>Oy 9
+inoremap <Esc>Op 0
+inoremap <Esc>On .
+inoremap <Esc>OQ /
+inoremap <Esc>OR *
+inoremap <Esc>Ol +
+inoremap <Esc>OS -
+inoremap <Esc>OM <Enter>
