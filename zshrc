@@ -19,6 +19,8 @@ fi
 
 alias ll='ls -all'
 alias ugh='rm -rf node_modules/ bower_components/ && npm cache clean && bower cache clean && npm i && bower i'
+# force tmux 256
+alias tmux='tmux -2'
 
 # Fix numeric keypad
 # 0 . Enter
